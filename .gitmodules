@@ -1,0 +1,6 @@
+[submodule "frontend-books"]
+	path = frontend-books
+	url = https://github.com/belarminon/frontend-books
+[submodule "api-books"]
+	path = api-books
+	url = https://github.com/belarminon/api-books.git
