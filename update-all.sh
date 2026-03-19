@@ -1,16 +1,14 @@
 #!/bin/bash
 
-echo "🔄 Atualizando submodules..."
-
-git submodule foreach '
-  echo "Atualizando $name"
-  git pull origin main
-'
-
-echo "📦 Commitando referências..."
+for d in api-books frontend-books; do
+  echo "🚀 $d"
+  cd $d
+  git add .
+  git commit -m "feat: auto update" || echo "sem mudanças"
+  git push
+  cd ..
+done
 
 git add .
-git commit -m "chore: update submodules"
+git commit -m "chore: sync submodules" || echo "sem mudanças"
 git push
-
-echo "✅ Tudo atualizado!"
