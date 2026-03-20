@@ -24,6 +24,7 @@ while true; do
     2)
       git submodule update --init --recursive
       git submodule foreach git pull origin main
+      git pull origin master
       read -p "Atualizado. Enter..."
       ;;
     3)
